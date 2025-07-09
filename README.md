@@ -21,94 +21,40 @@
 
 ---
 
-# 🎫 Event Management System (Laravel)
+# 🎫 Laravel Event Management & Booking System
 
-A Laravel-based event management system designed for smooth deployment on Railway. Includes user management, event creation, and a `/health` route for Railway's healthcheck.
+A modern **Laravel-based event booking system** that helps you create, manage, and schedule events with ease. Built with clean code practices and ready-to-deploy configuration on **Railway.app** with healthcheck support.
+
+Ideal for:  
+- 🎉 Event Booking Platforms  
+- 🧑‍💼 Admin/User Management  
+- 🗓️ Event Scheduling Systems  
+- 📅 Ticketing or Reservation Systems
+
+> 💡 **SEO Tags**: #Laravel #EventSystem #BookingSystem #EventManagement #EventScheduler #LaravelApp #EventApp #RailwayDeployment
 
 ---
 
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
-```bash
 git clone https://github.com/Ilyas02828/Eventsystem.git
 cd eventsystem
-2. Install Dependencies
-bash
-Copy
-Edit
+
+**2. Install Dependencies**
 composer install
 cp .env.example .env
 php artisan key:generate
-3. Setup SQLite (For Railway)
-bash
-Copy
-Edit
-touch database/database.sqlite
-In your .env, update:
 
-ini
-Copy
-Edit
-DB_CONNECTION=sqlite
-DB_DATABASE=/absolute/path/to/database/database.sqlite
-4. Run Migrations & Seed
-bash
-Copy
-Edit
+**3. Set Up MYSQL**
+Update .env:
+
+
+**4. Run Migrations and Seeder**
 php artisan migrate --seed
-5. Start Development Server
-bash
-Copy
-Edit
+
+**5. Start Development Server**
 php artisan serve
-📦 Railway Deployment Guide
-✅ Healthcheck Fix Summary
-/health route added
 
-railway.json updated
-
-Healthcheck timeout increased
-
-start.sh for permission + cache
-
-Required Railway Environment Variables
-env
-Copy
-Edit
-APP_ENV=production
-APP_DEBUG=false
-APP_KEY=base64:xxxxxxxxxxxxxxxxx
-DB_CONNECTION=sqlite
-DB_DATABASE=/app/database/database.sqlite
-Deployment Steps
-bash
-Copy
-Edit
-git add .
-git commit -m "Ready for Railway"
-git push origin main
-Ensure:
-
-Visit /health returns: {"status":"ok","message":"Event Management System is running"}
-
-App loads at: https://your-app-name.railway.app
-
-🛠️ Git Troubleshooting
-Problem:
-bash
-Copy
-Edit
-error: failed to push some refs to 'https://github.com/...'
-Fix:
-bash
-Copy
-Edit
-git pull origin main --rebase
-git push origin main
-Or force push (only if safe to override):
-
-bash
-Copy
-Edit
-git push origin main --force
+**Screenshots**
+![1752045497488](https://github.com/user-attachments/assets/06c5b3ed-6d8d-4d03-954e-b08e4257238c)
